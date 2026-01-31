@@ -531,7 +531,7 @@ fn promote_manifest_if_tmp_exists(root: &std::path::Path, seq: u64) {
 						}
 						Err(e) => {
 							log::warn!("promote_manifest: anchor verify failed: {}", e);
-							quarantine_tmp("anchor verification failed", &tmp);
+							quarantine_tmp(&format!("anchor verification failed: {}", e), &tmp);
 							return;
 						}
 					}
