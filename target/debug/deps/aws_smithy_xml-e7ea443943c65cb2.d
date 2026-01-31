@@ -1,0 +1,11 @@
+/Users/spence/Desktop/SpenFS/target/debug/deps/aws_smithy_xml-e7ea443943c65cb2.d: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/decode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/encode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/escape.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/unescape.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libaws_smithy_xml-e7ea443943c65cb2.rlib: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/decode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/encode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/escape.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/unescape.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libaws_smithy_xml-e7ea443943c65cb2.rmeta: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/decode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/encode.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/escape.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/unescape.rs
+
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/lib.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/decode.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/encode.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/escape.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-xml-0.55.3/src/unescape.rs:

@@ -1,0 +1,11 @@
+[package]
+name = "parking_lot"
+version = "0.11.2"
+edition = "2021"
+
+[dependencies]
+parking_lot_new = { package = "parking_lot", version = "0.12.1" }
+
+[lib]
+name = "parking_lot"
+path = "src/lib.rs"

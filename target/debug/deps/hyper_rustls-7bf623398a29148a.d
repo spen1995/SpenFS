@@ -1,0 +1,11 @@
+/Users/spence/Desktop/SpenFS/target/debug/deps/hyper_rustls-7bf623398a29148a.d: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/config.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector/builder.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/stream.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libhyper_rustls-7bf623398a29148a.rlib: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/config.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector/builder.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/stream.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libhyper_rustls-7bf623398a29148a.rmeta: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/config.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector/builder.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/stream.rs
+
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/lib.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/config.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/connector/builder.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/hyper-rustls-0.23.2/src/stream.rs:

@@ -1,0 +1,42 @@
+name: TPM SoftTPM Integration
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/**'
+
+jobs:
+  tpm-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential pkg-config swtpm swtpm-tools tpm2-tools libtss2-dev
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+
+      - name: Start swtpm
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/swtpm-state
+          swtpm socket --tpm2 --tpmstate dir=$GITHUB_WORKSPACE/swtpm-state --ctrl type=tcp,port=2322 --server type=tcp,port=2321 &>/tmp/swtpm.log &
+          sleep 2
+
+      - name: Run TPM feature tests
+        env:
+          TPM2TOOLS_TCTI: "socket:host=127.0.0.1,port=2321"
+          TSS2_TCTI: "mssim:port=2321"
+          SPENFS_TPM_NV_INDEX: 0x01500000
+        run: |
+          cargo test --features tpm --test tpm_soft_integration -- --nocapture

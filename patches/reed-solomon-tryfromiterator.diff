@@ -1,0 +1,28 @@
+*** Begin Patch
+*** Add File: reed-solomon-tryfromiterator.diff
++*** Add File: src/tryfrom.rs
++@@
+++// New fallible construction trait proposal for reed-solomon-erasure
+++pub trait TryFromIterator<T>: Sized {
+++    type Error;
+++    fn try_from_iter<I: IntoIterator<Item = T>>(iter: I) -> Result<Self, Self::Error>;
+++}
++
++*** End Patch
++
++--- example patch usage in core.rs ---
++*** Begin Patch
++*** Update File: src/core.rs
++@@
++ impl<F: Field> ReedSolomon<F> {
++     pub fn reconstruct<T: TryFromIterator<F::Elem>>(&self, slices: &mut [Option<T>]) -> Result<(), Error> {
++         // new fallible reconstruction path: attempt to use TryFromIterator to construct
++         // missing shards and return Err early on allocation/construct failure.
++         // Implementation follows the existing reconstruct() logic but uses T::try_from_iter
++         // where appropriate.
++         unimplemented!("See PR draft: reconstruct_try implementation");
++     }
++ }
++*** End Patch
++
++Note: This is a high-level patch sketch — upstream integration will require adapting the generic bounds and adding tests mirroring the existing test coverage.

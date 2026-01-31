@@ -1,0 +1,58 @@
+[package]
+name = "spenfs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"
+getrandom = "0.2"
+argon2 = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+rmp-serde = "1"
+blake3 = "1.3"
+hex = "0.4"
+anyhow = "1.0"
+chacha20poly1305 = "0.10"
+ed25519-dalek = "2"
+zeroize = "1.5"
+x25519-dalek = "1"
+hkdf = "0.12"
+sha2 = "0.10"
+base64 = "0.21"
+uuid = { version = "1", features = ["v4"] }
+serde_json = "1.0"
+reed-solomon-erasure = "6"
+ctrlc = "3"
+log = "0.4"
+env_logger = "0.10"
+chrono = { version = "0.4", features = ["serde"] }
+flate2 = "1.0"
+crossbeam-channel = "0.5"
+crc32fast = "1.3"
+tempfile = "3.5"
+rpassword = "7"
+byteorder = "1.4"
+libc = "0.2"
+keyring = "1.1"
+aws-config = { version = "1.8.12", optional = true }
+aws-sdk-kms = { version = "1.98.0", optional = true }
+tss-esapi = { version = "7.0", optional = true }
+aws-smithy-types = { version = "1.4.2", optional = true }
+tokio = { version = "1", optional = true, features = ["rt", "rt-multi-thread", "macros"] }
+security-framework = { version = "2", optional = true }
+core-foundation = { version = "0.9", optional = true }
+cryptoki = { version = "0.8", optional = true }
+
+# Local patch to replace `instant` crate with compat shim (mitigate unmaintained advisory)
+[patch.crates-io]
+instant = { path = "patches/instant-compat" }
+parking_lot = { path = "patches/parking_lot-compat" }
+
+[features]
+# Enable AWS KMS provider (requires AWS credentials and `AWS_KMS_KEY_ID` env var).
+aws-kms = ["aws-config", "aws-sdk-kms", "tokio", "aws-smithy-types"]
+enclave-se = ["security-framework", "core-foundation"]
+tpm = ["tss-esapi"]
+pkcs11 = ["cryptoki"]
+# In-repo TPM mock for CI/dev without system libs
+tpm-mock = []

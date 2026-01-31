@@ -1,0 +1,48 @@
+name: TPM emulator tests
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+
+jobs:
+  tpm-emulator-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pkg-config build-essential libssl-dev libudev-dev \
+            swtpm swtpm-tools tpm2-tools tpm2-abrmd libtss2-dev
+
+      - name: Start swtpm socket
+        run: |
+          TMPDIR=$(mktemp -d)
+          export SWTPM_DIR="$TMPDIR/swtpm"
+          mkdir -p "$SWTPM_DIR"
+          swtpm socket --tpm2 --tpmstate dir="$SWTPM_DIR" --ctrl type=unixio,path="$SWTPM_DIR/swtpm-sock" --server type=unixio,path="$SWTPM_DIR/swtpm-server" >/tmp/swtpm.log 2>&1 &
+          echo "swtpm started"
+          sleep 1
+
+      - name: Start tpm2-abrmd
+        run: |
+          TMPDIR=$(mktemp -d)
+          export SWTPM_DIR="$TMPDIR/swtpm"
+          mkdir -p "$SWTPM_DIR"
+          # start abrmd pointing at swtpm control socket
+          sudo /usr/sbin/tpm2-abrmd --tcti=socket --tcti-config="type=unixio,path=$SWTPM_DIR/swtpm-sock" >/tmp/abrmd.log 2>&1 &
+          sleep 1
+
+      - name: Show tpm devices
+        run: |
+          ls -l /dev | grep tpm || true
+
+      - name: Build & run tests with TPM feature
+        env:
+          PKG_CONFIG_PATH: /usr/lib/pkgconfig:/usr/local/lib/pkgconfig
+        run: |
+          cargo build --features tpm -v
+          cargo test --features tpm -q

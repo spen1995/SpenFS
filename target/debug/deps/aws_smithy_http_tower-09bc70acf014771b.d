@@ -1,0 +1,10 @@
+/Users/spence/Desktop/SpenFS/target/debug/deps/aws_smithy_http_tower-09bc70acf014771b.d: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/dispatch.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/map_request.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/parse_response.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libaws_smithy_http_tower-09bc70acf014771b.rlib: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/dispatch.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/map_request.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/parse_response.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libaws_smithy_http_tower-09bc70acf014771b.rmeta: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/dispatch.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/map_request.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/parse_response.rs
+
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/lib.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/dispatch.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/map_request.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-smithy-http-tower-0.56.1/src/parse_response.rs:

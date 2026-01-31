@@ -1,0 +1,14 @@
+/Users/spence/Desktop/SpenFS/target/debug/deps/reed_solomon_erasure-b9f4f1d6e8f0edae.d: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/macros.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/core.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/errors.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/matrix.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_16.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_8.rs /Users/spence/Desktop/SpenFS/target/debug/build/reed-solomon-erasure-88bf23c7608fc6b5/out/table.rs
+
+/Users/spence/Desktop/SpenFS/target/debug/deps/libreed_solomon_erasure-b9f4f1d6e8f0edae.rmeta: /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/lib.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/macros.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/core.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/errors.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/matrix.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_16.rs /Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_8.rs /Users/spence/Desktop/SpenFS/target/debug/build/reed-solomon-erasure-88bf23c7608fc6b5/out/table.rs
+
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/lib.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/macros.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/core.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/errors.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/matrix.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_16.rs:
+/Users/spence/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/reed-solomon-erasure-6.0.0/src/galois_8.rs:
+/Users/spence/Desktop/SpenFS/target/debug/build/reed-solomon-erasure-88bf23c7608fc6b5/out/table.rs:
+
+# env-dep:OUT_DIR=/Users/spence/Desktop/SpenFS/target/debug/build/reed-solomon-erasure-88bf23c7608fc6b5/out

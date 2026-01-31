@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+      - name: Prepare passphrase file
+        run: |
+          printf "ci-test-pass\n" > spenfs_pass.txt
+          chmod 600 spenfs_pass.txt
+      - name: Run tests (use passphrase file)
+        run: |
+          export SPENFS_PW_FILE=$PWD/spenfs_pass.txt
+          echo "ulimit -l: $(ulimit -l)"
+          cargo test --all -- --nocapture
+      - name: Run cargo-audit
+        run: |
+          cargo install --locked cargo-audit || true
+          cargo audit || true
+
+  memlock-check:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print memlock limits
+        run: |
+          echo "RLIMIT_MEMLOCK (ulimit -l):"
+          ulimit -l || true
+          echo "prlimit output (if available):"
+          command -v prlimit >/dev/null && prlimit --pid $$ --resource RLIMIT_MEMLOCK || true
+      - name: Prepare passphrase file
+        run: |
+          printf "ci-test-pass\n" > spenfs_pass.txt
+          chmod 600 spenfs_pass.txt
+      - name: Run tests with SPENFS_FAIL_ON_MLOCK=1 (will fail if memlock insufficient)
+        run: |
+          export SPENFS_PW_FILE=$PWD/spenfs_pass.txt
+          export SPENFS_FAIL_ON_MLOCK=1
+          cargo test --all -- --nocapture
+      - name: Run cargo-audit
+        run: |
+          cargo install --locked cargo-audit || true
+          cargo audit || true
