@@ -9,6 +9,9 @@ SpenFS — Project Help
 - **Journal / WAL**: `journal/journal.log` — length-prefixed bincode `JournalEntry` list with ops: `StartTxn`, `EndTxn`, `AbortTxn`, `CommitManifest`, `Create`, `Unlink`, `Rename`.
 - **Atomic manifest commit**: write manifest tmp -> fsync -> append `CommitManifest` to journal -> caller triggers WAL apply -> manifest promotion (with signature + AEAD checks) -> fsync parent -> journal archived.
 - **Manifest security**: manifests are serialized, AEAD-encrypted (XChaCha20-Poly1305), and signed (Ed25519). Promotion verifies signature and tries AEAD decrypt; failing tmp manifests are quarantined.
+- **KeyStore & HSM/KMS providers**: a `KeyStore` abstraction was added to allow non-exportable signing/decryption keys. Current providers/scaffolds include TPM (native via `tss-esapi` when built with the `tpm` feature), a macOS Secure Enclave provider (`enclave-se` feature), and a PKCS#11 scaffold for on-token keys. A file-backed `tpm-mock` provider exists for local testing and CI.
+- **Multi-recipient envelopes & recipient signing**: manifests support a multi-recipient envelope format and signed recipient lists to allow encrypting manifests to multiple recipients while protecting against recipient-swap attacks.
+- **Anchor verification & anti-rollback**: anchors include optional monotonic/TPM NV commitments and `verify_anchor()` enforces monotonic promotion checks to detect rollback or anchor tampering.
 - **Chunking & redundancy**: Gear CDC chunker, chunk encryption with AEAD, and RS redundancy helpers (encode/repair shards).
 - **Repair daemon**: background scanner/repair process with structured JSONL repair logs, log rotation, gzip compression, CRC verification, quarantine/restore, and periodic prune.
 - **Upload/resume**: upload state persisted under `uploads/` with `upload-start` and `upload-resume` CLI helpers.
